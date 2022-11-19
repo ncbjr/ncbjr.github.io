@@ -3,9 +3,12 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Nilton Junior</title>
+    <!--Responsividade-->
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!--Única folha de estilo usada no trabalho-->
     <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <!--Scripts JS-->
     <script>
         function moveExp() {
             /* Emite mensagem na tela */
@@ -13,8 +16,9 @@
             /* joga um gif sem vergonha na tela */
             document.getElementById("hab").innerHTML = "<img id='hab' height=1200px width=2200px src='https://media4.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif?cid=790b7611003026c63efee21823afbddf88d16a147855cf73&rid=giphy.gif&ct=g' alt='exp gif'>";
             var gif = document.getElementById("hab");
+            /*Força a tela cheia no navegador */
             gif.requestFullscreen()
-            /* Move para a seção experiências */
+            /* Move para a seção habilidades */
             document.getElementById("hab").scrollIntoView();
             /* Remove o gif e emite outra mensagem na tela */
             setTimeout(pegadinhadomalandro, 3000);
@@ -26,20 +30,25 @@
         }
 
         function time() {
+            /*Obtém a data de hoje*/
             hoje=new Date();
+            /*Formata como DD/MM/AAAA (o mês é retornado entre 0 e 11, por isso somei 1 */
             datahoje=hoje.getDate()+"/"+(hoje.getMonth()+1)+"/"+hoje.getFullYear();
+            /*Insere a data formatada no lugar do span de id datahoje*/
             document.getElementById('datahoje').innerHTML=datahoje;
             t=setTimeout('time()',500);
 }
 </script>
     </script>
 </head>
+<!-- aqui a função que insere a data atual na minha última experiência profissional é chamada quando a página carrega-->
 <body onload="time()">
     <header>
         <nav id="menu-h">
             <ul>
                 <li><a href="#exp">Experiência</a></li>
                 <li><a href="#form">Formação</a></li>
+                <!--Gatilho que aciona a brincadeira da função moveExp-->
                 <li><a href="#hab" onclick="moveExp()">Habilidades</a></li>
                 <li><a href="#cont">Contato</a></li>
             </ul>
@@ -52,7 +61,6 @@
             <img src="nilton.png" alt="Nilton Junior" height="150px">
             <br><br>
             <h2>SysAdmin Linux<br>Engenheiro de Software em formação</h2>
-            <!--botões-->
             <br>
             <div class="social">
                 <a href="https://www.linkedin.com/in/nilton-cezar-a84a08a8" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="linkedin" height="50px"></a>
@@ -71,7 +79,7 @@
             <br>
             <li><b>~ Técnico de Suporte</b> || Prefeitura Municipal de Maricá || <b>01/2017 -> 01/2018</b>.</li>
             <br>
-            <li><b># Administrador de Sistemas Linux</b> || Prefeitura Municipal de Maricá || <b>01/2018 -> <span id="datahoje">DATA DE HOJE</span></b>.</li>
+            <li><b># Administrador de Sistemas Linux</b> || Prefeitura Municipal de Maricá || <b>01/2018 -> <span id="datahoje">DATA DE HOJE</span></b>.</li> <!--Esse span vai ser substituído pelo JS-->
         </ul>
     </section>
     <br><br><br><br>
