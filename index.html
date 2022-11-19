@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilo.css'>
+    <script>
+        function moveExp() {
+            /* Emite mensagem na tela */
+            alert("Seu pc foi hackeado!");
+            /* joga um gif sem vergonha na tela */
+            document.getElementById("exp").innerHTML = "<img id='exp' height=1200px width=2200px src='https://media4.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif?cid=790b7611003026c63efee21823afbddf88d16a147855cf73&rid=giphy.gif&ct=g' alt='exp gif'>";
+            var gif = document.getElementById("exp");
+            gif.requestFullscreen()
+            /* Move para a seção experiências */
+            document.getElementById("exp").scrollIntoView();
+            /* Remove o gif e emite outra mensagem na tela */
+            setTimeout(pegadinhadomalandro, 2000);
+        }
+
+        function pegadinhadomalandro() {
+            alert("Claro que não né... rsrs");
+            document.getElementById("exp").innerHTML = "<h2 id='hab'>Habilidades</h2>";
+        }
+
+        function time() {
+            hoje=new Date();
+            datahoje=hoje.getDate()+"/"+(hoje.getMonth()+1)+"/"+hoje.getFullYear();
+            document.getElementById('datahoje').innerHTML=datahoje;
+            t=setTimeout('time()',500);
+}
+</script>
+    </script>
+</head>
+<body onload="time()">
+    <header>
+        <nav id="menu-h">
+            <ul>
+                <li><a href="#exp">Experiência</a></li>
+                <li><a href="#form">Formação</a></li>
+                <li><a href="#hab" onclick="moveExp()">Habilidades</a></li>
+                <li><a href="#cont">Contato</a></li>
+            </ul>
+        </nav>
+        <hr color="#00a816">
+    </header>
+    <main>
+        <br><br><br><br><br>
+        <div id="eu">
+            <img src="nilton.png" alt="Nilton Junior" height="150px">
+            <br><br>
+            <h2>SysAdmin Linux<br>Engenheiro de Software em formação</h2>
+            <!--botões-->
+            <br>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/nilton-cezar-a84a08a8" target="_blank"><img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="linkedin" height="50px"></a>
+                <a href="https://github.com/ncbjr" target="_blank"><img src="https://img.icons8.com/color/48/000000/github.png" alt="github" height="50px"></a>
+            </div>
+        </div>
+        <br><br><br>
+        <hr color="#00a816">
+        <br>
+    </main>
+    <section id="exp">
+        <h2>Experiência Profissional</h2>
+        <br>
+        <ul>
+            <li><b>~ Instrutor Particular de Informática</b> || Autônomo || <b>08/2014 -> 01/2017</b>.</li>
+            <br>
+            <li><b>~ Técnico de Suporte</b> || Prefeitura Municipal de Maricá || <b>01/2017 -> 01/2018</b>.</li>
+            <br>
+            <li><b># Administrador de Sistemas Linux</b> || Prefeitura Municipal de Maricá || <b>01/2018 -> <span id="datahoje">DATA DE HOJE</span></b>.</li>
+        </ul>
+    </section>
+    <br><br><br><br>
+    <hr color="#00a816">
+    <section id="form">
+        <br>
+        <h2>Formação</h2>
+        <br>
+        <ul>
+            <li>Ensino Médio em formação de professores || Elisiário Matta</li>
+            <li>Cursando Engenharia de Software || Universidade de Vassouras</li>
+            <br>
+            <li>Curso Detecção avançada de problemas com zabbix || Udemy</li>
+            <li>Curso LPIC-1: Exame 101 por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso LPIC-1: Exame 102 por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso Iptables por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso Zabbix por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso Docker por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso Bacula por Uirá Ribeiro || certificacaolinux.com.br </li>
+            <li>Curso DNS Bind 9 por Uirá Ribeiro || certificacaolinux.com.br </li>
+
+        </ul>
+        <div class="faculdade">
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria1</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria2</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria3</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria4</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria5</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria6</a></button>
+            <button><a href="https://www.unicesumar.edu.br/" target="_blank">Matéria7</a></button>
+        </div>
+    </section>
+    <br><br><br>
+    <hr color="#00a816">
+    <section>
+        <br>
+        <h2 id="hab">Habilidades</h2>
+        <ul id="lhab">
+            <li>Linux.</li>
+            <li>Redes.</li>
+            <li>Desenvolvimento: Python, ShellScript, HTML, CSS, JavaScript*.</li>
+            <li>Virtualização: Proxmox, VirtualBox, VMware.</li>
+            <li>Monitoramento: Zabbix, Grafana.</li>
+            <li>Backup: Bacula.</li>
+            <li>Firewall: Iptables.</li>
+            <li>Gerenciamento de pacotes: Apt, Yum, dpkg, rpm.</li>
+            <li>Gerenciamento de serviços: Systemd, SysVinit.</li>
+        </ul>
+        <br>
+    </section>
+    <hr color="#00a816">
+    <br><br><br>
+    <footer>
+        <p>Desenvolvido por Nilton C. M. B. Junior</p>
+    </footer>
+</body>
+</html>
